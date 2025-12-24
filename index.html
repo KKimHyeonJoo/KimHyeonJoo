@@ -40,7 +40,7 @@
             box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
         }
         
-        /* --- Clean Card Style (Updated from test.html) --- */
+        /* --- Clean Card Style --- */
         .clean-card {
             background: white;
             border: 1px solid #e2e8f0;
@@ -439,64 +439,72 @@
     </footer>
 
     <div id="project-modal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-4 backdrop-blur-sm opacity-0 invisible" onclick="closeModal()">
-    <div class="modal-content bg-white rounded-3xl w-full max-w-3xl max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl relative" onclick="event.stopPropagation()">
-        
-        <button onclick="closeModal()" class="absolute top-6 right-6 z-20 w-10 h-10 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center text-slate-500 transition">
-            <i class="fa-solid fa-xmark text-xl"></i>
-        </button>
-
-        <div class="p-8 md:p-10">
-            <div class="mb-8">
-                <h2 id="modal-title" class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2 leading-tight"></h2>
-                <h3 id="modal-subtitle" class="text-lg text-slate-500 font-medium mb-6"></h3>
-                
-                <div class="flex flex-wrap gap-2 mb-5" id="modal-tags"></div>
-
-                <div class="flex items-center gap-2 text-slate-500">
-                    <i class="far fa-calendar-alt text-lg"></i>
-                    <p id="modal-period" class="text-base font-medium"></p>
-                </div>
-            </div>
-
-            <div id="modal-image-container" class="mb-10 rounded-2xl overflow-hidden border border-slate-100 hidden">
-                <img id="modal-image" src="" alt="Project Screen" class="w-full h-auto object-cover">
-            </div>
-            <div id="modal-gradient-container" class="mb-10 rounded-2xl h-48 flex items-center justify-center hidden">
-                <i id="modal-icon" class="text-5xl text-white opacity-90"></i>
-            </div>
+        <div class="modal-content bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl relative" onclick="event.stopPropagation()">
             
-            <div id="modal-links" class="flex flex-wrap gap-3 mb-10 border-b border-slate-100 pb-8"></div>
+            <button onclick="closeModal()" class="absolute top-6 right-6 z-20 w-10 h-10 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center text-slate-500 transition">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
 
-            <div class="space-y-10">
-                
-                <div>
-                    <h4 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                        <i class="fa-solid fa-circle-info text-indigo-600"></i> 개요
-                    </h4>
-                    <div id="modal-intro-sentence" class="hidden mb-4 p-4 bg-indigo-50 rounded-xl text-indigo-900 font-medium"></div>
-                    <p id="modal-overview" class="text-slate-700 leading-8 text-lg"></p>
-                </div>
+            <div class="p-8 md:p-10">
+                <div class="mb-8">
+                    <h2 id="modal-title" class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2 leading-tight"></h2>
+                    <h3 id="modal-subtitle" class="text-lg text-slate-500 font-medium mb-6"></h3>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5" id="modal-tags"></div>
 
-                <div>
-                    <h4 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                        <i class="fa-solid fa-list-check text-indigo-600"></i> 주요 기능 및 역할
-                    </h4>
-                    <ul id="modal-features" class="space-y-3 text-slate-700 text-lg leading-relaxed">
-                    </ul>
-                </div>
-
-                <div id="modal-result-container" class="hidden">
-                    <h4 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                        <i class="fa-solid fa-trophy text-indigo-600"></i> 성과 및 인사이트
-                    </h4>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                        <p id="modal-result" class="text-slate-700 font-medium leading-relaxed"></p>
+                    <div class="flex items-center gap-2 text-slate-500">
+                        <i class="far fa-calendar-alt text-lg"></i>
+                        <p id="modal-period" class="text-base font-medium"></p>
                     </div>
                 </div>
+
+                <div id="modal-image-container" class="mb-10 rounded-2xl overflow-hidden border border-slate-100 hidden">
+                    <img id="modal-image" src="" alt="Project Screen" class="w-full h-auto object-cover">
+                </div>
+                <div id="modal-gradient-container" class="mb-10 rounded-2xl h-48 flex items-center justify-center hidden">
+                    <i id="modal-icon" class="text-5xl text-white opacity-90"></i>
+                </div>
+                
+                <div id="modal-links" class="flex flex-wrap gap-3 mb-10 border-b border-slate-100 pb-8"></div>
+
+                <div class="space-y-10">
+                    
+                    <div>
+                        <h4 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-info text-indigo-600"></i> 개요
+                        </h4>
+                        <div id="modal-intro-sentence" class="hidden mb-4 p-4 bg-indigo-50 rounded-xl text-indigo-900 font-medium"></div>
+                        <p id="modal-overview" class="text-slate-700 leading-8 text-lg"></p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-list-check text-indigo-600"></i> 주요 기능 및 역할
+                        </h4>
+                        <ul id="modal-features" class="space-y-3 text-slate-700 text-lg leading-relaxed">
+                        </ul>
+                    </div>
+
+                    <div id="modal-result-container" class="hidden">
+                        <h4 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-trophy text-indigo-600"></i> 성과 및 인사이트
+                        </h4>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <p id="modal-result" class="text-slate-700 font-medium leading-relaxed"></p>
+                        </div>
+                    </div>
+
+                    <div id="modal-execution-section" class="hidden border-t border-slate-100 pt-10">
+                        <h4 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                            <i class="fa-solid fa-desktop text-indigo-600"></i> 주요 실행 화면
+                        </h4>
+                        <div id="modal-execution-container" class="space-y-12">
+                            </div>
+                    </div>
+                    </div>
             </div>
         </div>
     </div>
-</div>
 
     <script>
         // Project Data with Detailed Info
@@ -505,7 +513,6 @@
                 title: "MarketSync (마켓싱크)",
                 subtitle: "Agentic RAG 기반 소상공인 맞춤형 축제 추천 & 마케팅 AI 컨설턴트",
                 headerType: "image",
-                // 이미지 경로 수정: image/ 폴더 추가
                 imageSrc: "image/MarketSync.png",
                 tags: [
                     "LangChain", "FastAPI", "Streamlit", "FAISS", "Gemini-2.5-Flash"
@@ -516,9 +523,16 @@
                     { name: "GitHub", url: "https://github.com/KKimHyeonJoo/MarketSync", icon: "fab fa-github" },
                     { name: "Demo Video", url: "https://youtu.be/lQ1LE8uB-B8", icon: "fab fa-youtube", color: "text-red-600" }
                 ],
+                // ▼▼▼ Execution Examples Data ▼▼▼
+                execution: [
+                    { src: "image/마켓싱크화면1.PNG", desc: "가게 프로필 분석 (SWOT)" },
+                    { src: "image/마켓싱크화면2.PNG", desc: "사용자 질문과 가게 맞춤 축제 추천" },
+                    { src: "image/마켓싱크화면3.PNG", desc: "맞춤형 마케팅 전략 제안" }
+                ],
+                // ▲▲▲ End Data ▲▲▲
                 overview: "소상공인이 보유한 데이터는 많지만 이를 활용해 마케팅 전략을 수립하는 데 어려움을 겪는 현실에 주목했습니다. MarketSync는 사용자가 자연어로 질문하면 LangChain 기반 Agent가 가게 상황을 스스로 분석하고, 우리 가게와 시너지가 날 지역 축제를 추천하며, 축제에 참가하거나 연계할 수 있는 구체적인 마케팅 아이디어까지 제안합니다.",
                 features: [
-                    "<strong>Agentic Workflow 설계:</strong> LangChain의 Tool-calling Agent를 활용하여 사용자 질문 의도를 파악하고 '가게 분석', '축제 추천', '전략 생성' 등 적합한 도구(Tool)를 스스로 선택·실행하는 오케스트레이터 구현",
+                    "<strong>Agentic Workflow 설계:</strong> LangChain의 Tool-calling Agent를 활용하여 사용자 질문 의도를 파악하고 '가게 분석', '축제 추천', '전략 생성' 등 적합한 도구(Tool)를 스스로 선택·실행하는 오케스트레이터 구현 <br><img src='image/마켓싱크아키텍처.PNG' alt='마켓싱크 아키텍쳐' class='mt-6 w-full rounded-xl border border-slate-200 shadow-md'>",
                     "<strong>Context-Aware 프롬프트:</strong> 가게의 강점/약점(SWOT) 분석 결과와 추천된 축제의 상세 정보를 프롬프트 컨텍스트에 동적으로 삽입하여, 템플릿 답변이 아닌 '우리 가게만을 위한' 맞춤형 전략 생성",
                     "<strong>하이브리드 추천 엔진:</strong> FAISS 기반의 벡터 유사도 검색(Semantic Search)과 LLM을 이용한 축제 속성 동적 평가(Dynamic Scoring)를 결합하여, 질문의 의도와 가게 특성에 모두 부합하는 고정밀 축제 추천 알고리즘 설계",
                     "<strong>Marketing RAG 구축:</strong> 민간 마케팅 성공사례, 배달의민족 운영 가이드 등 검증된 마케팅 자료를 수집·임베딩하여, AI가 근거 있고 실현 가능한 전략을 제시하도록 Retriever 구축",
@@ -538,13 +552,13 @@
                     { name: "GitHub", url: "https://github.com/KKimHyeonJoo/STUBO", icon: "fab fa-github" },
                     { name: "Demo Video", url: "https://youtu.be/Yzf9WPaIrN4", icon: "fab fa-youtube", color: "text-red-600" }
                 ],
-                overview: "이미지 형태의 국어 지문과 문제를 분석하여 시각적 기호와 문단 구조를 완벽하게 복원하고, RAG 및 자체 하이브리드 추천 알고리즘을 통해 심층 해설과 맞춤형 기출문제를 제공하는 올인원 에듀테크 플랫폼임.",
+                overview: "이미지 형태의 국어 지문과 문제를 분석하여 시각적 기호와 문단 구조를 완벽하게 복원하고, RAG 및 자체 하이브리드 추천 알고리즘을 통해 심층 해설과 맞춤형 기출문제를 제공하는 올인원 에듀테크 플랫폼입니다.",
                 features: [
-                    "<strong>문학 지문 특화 OCR 파이프라인 구축:</strong> 국어 지문 특유의 긴 호흡과 복잡한 기호([A], ㉠, ⓐ 등)를 정확히 추출하기 위해 이미지를 5등분으로 분할 처리하는 <strong>Logical Chunking</strong> 기법을 설계함. GPT-4o Vision을 활용한 다단계 후처리를 통해 강조 표현과 문단 구조를 원문 그대로 복원하여 모델의 문제 이해도를 극대화함.",
-                    "<strong>기출 데이터셋 구축 및 자동 태깅 시스템:</strong> 2021년부터 2025년까지의 수능·모평 기출문제 238문항을 전수 조사하여 <strong>출제기관·장르·지문구성·문제유형</strong> 등 5개 핵심 메타데이터를 포함한 JSON 지식 베이스를 구축함. LangChain을 이용해 방대한 기출 데이터를 문항 단위로 자동 태깅하는 파이프라인을 구현함.",
-                    "<strong>가중치 기반 하이브리드 유사 문제 추천 알고리즘:</strong> 단순 벡터 유사도의 한계를 해결하고자 <strong>[최종 유사도 = 태그 점수 * 0.7 + 임베딩 점수 * 0.3]</strong> 수식을 독자적으로 설계함. 문제 유형, 지문 장르(최대 3점), 복합/단일 여부 등에 세부 가중치를 부여하여 단순 키워드 매칭을 넘어 출제 의도가 가장 유사한 문제를 학습자에게 추천함.",
-                    "<strong>EBS 연계 자료 기반의 고정밀 RAG 시스템:</strong> 답변의 신뢰성을 높이기 위해 2025학년도 EBS 수능특강 교사용 자료 및 전문 작품 해설 데이터를 벡터화하여 FAISS DB를 구축함. 직접 교정한 Clean Text 기준 <strong>82.4%의 정답률</strong>을 기록하며, 지식 기반 검색을 통해 LLM의 환각 현상을 성공적으로 제어함.",
-                    "<strong>범과목 통합 아키텍처 및 Streamlit 웹 서비스:</strong> 문학을 포함해 독서, 언어와 매체 등 개별 과목 파이프라인을 하나의 인터페이스로 통합함. Streamlit을 활용하여 사용자가 업로드한 이미지의 OCR 결과 실시간 확인, AI 튜터링 대화, 연관 기출문제 PDF 연동 등 실제 서비스가 가능한 수준의 Full-Stack UX를 구현함."
+                    "<strong>문학 지문 특화 OCR 파이프라인 구축:</strong> 국어 지문 특유의 긴 호흡과 복잡한 기호([A], ㉠, ⓐ 등)를 정확히 추출하기 위해 이미지를 5등분으로 분할 처리하는 <strong>Logical Chunking</strong> 기법을 설계하고, GPT-4o Vision을 활용한 다단계 후처리를 통해 원문 그대로 복원",
+                    "<strong>기출 데이터셋 구축 및 자동 태깅 시스템:</strong> 2021년부터 2025년까지의 수능·모평 기출문제 238문항을 전수 조사하여 <strong>출제기관·장르·지문구성·문제유형</strong> 등 5개 핵심 메타데이터를 포함한 JSON 지식 베이스를 구축하고 LangChain을 이용해 문항 단위 자동 태깅 파이프라인 구현",
+                    "<strong>가중치 기반 하이브리드 유사 문제 추천 알고리즘:</strong> 단순 벡터 유사도의 한계를 해결하고자 <strong>[최종 유사도 = 태그 점수 * 0.7 + 임베딩 점수 * 0.3]</strong> 수식을 독자적으로 설계하여 출제 의도가 가장 유사한 문제를 추천",
+                    "<strong>EBS 연계 자료 기반의 고정밀 RAG 시스템:</strong> 2025학년도 EBS 수능특강 교사용 자료 및 전문 작품 해설 데이터를 벡터화하여 FAISS DB를 구축하고, 직접 교정한 Clean Text 기준 <strong>82.4%의 정답률</strong>을 기록하며 LLM 환각 현상을 성공적으로 제어",
+                    "<strong>범과목 통합 아키텍처 및 Streamlit 웹 서비스:</strong> 문학, 독서, 언어와 매체 등 개별 과목 파이프라인을 하나의 인터페이스로 통합하고 Streamlit을 활용하여 OCR 결과 실시간 확인 및 AI 튜터링 대화가 가능한 Full-Stack UX 구현"
                 ],
                 result: "TAVE 동아리 최종 프로젝트 <strong>우수회원상 1등</strong> 수상. OCR 기반 정답률(70.59%) 대비 텍스트 최적화 후 정답률(82.4%) 향상을 통해 기술적 가치를 입증했으며, 기출 태깅과 정교한 추천 알고리즘으로 에듀테크의 실질적인 솔루션을 제시함."
             },
@@ -553,7 +567,6 @@
                 title: "INUchat (인챗)",
                 subtitle: "RAG 기반 교내 학사 정보 실시간 검색 챗봇 서비스",
                 headerType: "image",
-                // 이미지 경로 수정: image/ 폴더 추가
                 imageSrc: "image/INUchat.png",
                 tags: ["RAG Pipeline", "Flask", "LangSmith", "AWS EC2", "PyPDFLoader"],
                 period: "2023.10 ~ 2024.05 (졸업작품 캡스톤 디자인)",
@@ -563,7 +576,7 @@
                 ],
                 overview: "방대한 양의 학교 규정집, 학칙, 공지사항 PDF 파일을 AI가 학습하여, 학생들의 질문에 대해 정확한 출처와 함께 답변을 제공하는 캠퍼스 라이프 어시스턴트 챗봇입니다.",
                 features: [
-                    "<strong>RAG 파이프라인 최적화:</strong> PyPDFLoader로 비정형 PDF 문서를 전처리 및 청킹(Chunking)하고 FAISS로 인덱싱하여, 최신 학사 정보를 누락 없이 검색(Retrieval)할 수 있는 시스템 구축",
+                    "<strong>RAG 파이프라인 최적화:</strong> PyPDFLoader로 비정형 PDF 문서를 전처리 및 청킹(Chunking)하고 FAISS로 인덱싱하여, 최신 학사 정보를 누락 없이 검색(Retrieval)할 수 있는 시스템 구축<br><img src='image/인챗구현방법2.jpg' alt='인챗 아키텍처' class='mt-4 w-full md:w-3/4 rounded-lg border border-slate-200 shadow-sm'>",
                     "<strong>모델 성능 평가 및 선정:</strong> LangSmith Auto-Evaluator를 활용한 정량 평가를 통해, GPT-4 대비 속도는 3.7배 빠르면서도 답변 품질은 유지하는 GPT-3.5-turbo를 최적 모델로 선정 (Retrieval Score 85점 달성)",
                     "<strong>사용자 친화적 설계:</strong> '과사(학과사무실)', '학식(학생식당)' 등 대학생들이 주로 쓰는 약어와 은어를 인식하도록 프롬프트를 튜닝하고 한국어/영어 다국어 입출력을 지원하여 Answer Score 83점 확보",
                     "<strong>Full-Stack 구현:</strong> AWS EC2 인스턴스에 Flask 서버를 배포하고 Android 앱과 REST API로 연동하여 모바일 환경에서 끊김 없이 동작하는 실제 서비스 구현"
@@ -579,19 +592,19 @@
                 iconClass: "fa-solid fa-school",
                 tags: ["Data Mining", "AdaBoost", "Feature Engineering", "Policy Proposal"],
                 period: "2023.04 ~ 2023.05 (2023년 성남시 공공데이터 활용·분석 아이디어 공모전)",
-                links: [],
+                links: [
+                    { name: "자세히 보기", url: "https://drive.google.com/file/d/197IDIgcRt2zaj_p4UTbeAVYs3SU5zsCo/view?usp=sharing", icon: "fas fa-file-alt" }
+                ],
                 intro: "단순히 시설물 개수를 늘리는 것이 능사가 아님을 데이터로 증명했습니다. 머신러닝 분석과 로드뷰 전수 조사를 통해 '방호 울타리'와 '옐로우카펫'이 사고 예방의 핵심임을 밝혀내고, 성남시 맞춤형 안전망 구축을 제안했습니다.",
                 overview: "'민식이법' 시행 이후에도 스쿨존 사고가 끊이지 않는 현실에서 <strong>'과연 시설물이 많다고 해서 무조건 안전할까?'</strong>라는 의문을 가졌습니다. 성남시와 유사한 환경을 가진 인근 4개 도시(수원, 하남, 광명, 구리)의 데이터를 학습하여 사고 발생 패턴을 모델링하고, 이를 성남시에 적용해 잠재적 사고 위험 지역을 예측했습니다.",
                 features: [
-                    "<strong>Advanced Feature Engineering:</strong> 법적 스쿨존 범위인 반경 300m 내의 데이터를 통합하기 위해 위경도 좌표 변환(EPSG:4326) 및 Haversine 거리 공식을 적용했습니다. 단순 위치 정보를 넘어 신호등, 옐로우카펫 유무, <strong>방호 울타리 길이</strong>, 횡단보도 폭, CCTV 개수 등 <strong>9가지 핵심 안전 시설물 특징량(Feature)</strong>을 생성하여 분석의 깊이를 더했습니다.",
+                    "<strong>Advanced Feature Engineering:</strong> 법적 스쿨존 범위인 반경 300m 내의 데이터를 통합하기 위해 위경도 좌표 변환(EPSG:4326) 및 Haversine 거리 공식을 적용하고, 신호등, 옐로우카펫 유무, <strong>방호 울타리 길이</strong> 등 <strong>9가지 핵심 안전 시설물 특징량(Feature)</strong>을 생성",
                     
-                    // 이미지 경로 수정: image/ 폴더 추가
-                    "<strong>Model Optimization & Selection:</strong> 데이터 불균형(Imbalance) 문제를 해결하기 위해 Stratified K-Fold 교차 검증을 도입하고, GridSearchCV로 하이퍼파라미터를 최적화했습니다. Logistic Regression, SVM, RandomForest 등 5개 모델을 비교 실험한 결과, <strong>AdaBoost가 정확도 0.73</strong>으로 가장 우수한 성능을 보여 최종 모델로 선정했습니다.<br><img src='image/graph.png' alt='머신러닝 모델 성능 비교 표' class='mt-4 w-full md:w-3/4 rounded-lg border border-slate-200 shadow-sm'>",
+                    "<strong>Model Optimization & Selection:</strong> 데이터 불균형(Imbalance) 문제를 해결하기 위해 Stratified K-Fold 교차 검증을 도입하고, GridSearchCV로 하이퍼파라미터를 최적화하여 Logistic Regression 등 5개 모델 비교 후 <strong>AdaBoost(정확도 0.73)</strong>를 최종 모델로 선정<br><img src='image/graph.png' alt='머신러닝 모델 성능 비교 표' class='mt-4 w-full md:w-3/4 rounded-lg border border-slate-200 shadow-sm'>",
                     
-                    "<strong>Quantitative & Qualitative Analysis:</strong> Feature Importance 분석을 통해 단순한 표지판 개수보다 <strong>'방호 울타리의 길이'</strong>와 <strong>'옐로우카펫 설치 여부'</strong>가 사고 억제에 결정적인 변수임을 통계적으로 규명했습니다. 더불어 로드뷰 전수 조사를 수행하여, 기존 표지판들이 운전자 시야에서 가려지거나 야간 식별이 어렵다는 질적 문제점(Visibility)도 함께 지적했습니다.",
+                    "<strong>Quantitative & Qualitative Analysis:</strong> Feature Importance 분석을 통해 <strong>'방호 울타리의 길이'</strong>와 <strong>'옐로우카펫 설치 여부'</strong>가 사고 억제에 결정적인 변수임을 통계적으로 규명하고, 로드뷰 전수 조사를 통해 기존 표지판의 시인성 문제 등 질적 문제점 추가 분석",
                     
-                    // 이미지 경로 수정: image/ 폴더 추가
-                    "<strong>Targeted Policy Proposal:</strong> 모델 예측 확률과 공간 분석(Folium)을 기반으로 <strong>분당구 서현동, 정자동, 야탑동</strong>을 고위험 집중 관리 구역(Hot Spot)으로 특정했습니다. 해당 지역에 대해 규격화된 방호 울타리 교체 및 옐로우카펫 우선 설치를 제안하며, 단순 예산 투입이 아닌 데이터 기반의 효율적 정책 수립을 도왔습니다.<br><img src='image/map.PNG' alt='성남시 사고 위험 지역 시각화 지도' class='mt-4 w-full rounded-lg border border-slate-200 shadow-sm'>"
+                    "<strong>Targeted Policy Proposal:</strong> 모델 예측 확률과 공간 분석(Folium)을 기반으로 <strong>분당구 서현동, 정자동, 야탑동</strong>을 고위험 집중 관리 구역(Hot Spot)으로 특정하고, 규격화된 방호 울타리 교체 및 옐로우카펫 우선 설치 정책 제안<br><img src='image/map.PNG' alt='성남시 사고 위험 지역 시각화 지도' class='mt-4 w-full rounded-lg border border-slate-200 shadow-sm'>"
                 ],
                 result: "성남시 공공데이터 활용·분석 아이디어 공모전 본선 진출.<br>데이터에 기반한 정량적 근거(머신러닝 예측)와 현장 조사를 통한 정성적 근거(로드뷰 분석)를 결합하여, 실질적인 사고 감소로 이어질 수 있는 설득력 있는 정책 제안 보고서를 완성했습니다."
             },
@@ -604,14 +617,14 @@
                 tags: ["AI Curation", "Big Data", "Digital Healthcare", "Public Data", "Carbon Neutrality"],
                 period: "2023.09 ~ 2023.11 (2023 인천대학교 AI 경진대회)",
                 links: [
-                    { name: "Proposal", url: "#", icon: "fas fa-file-pdf" }
+                    { name: "자세히 보기", url: "https://drive.google.com/file/d/18Px5pdFSqOa4OLX4cc9DBCARgg6ASj1m/view?usp=sharing", icon: "fas fa-file-pdf" }
                 ],
-                overview: "전력 사용량 및 헬스케어 데이터를 실시간 모니터링하여 에너지 취약계층의 고독사를 예방하고, 탄소중립 실천 실적을 지역 스포츠 산업 보상과 연계하는 AI 맞춤형 큐레이션 플랫폼임.",
+                overview: "전력 사용량 및 헬스케어 데이터를 실시간 모니터링하여 에너지 취약계층의 고독사를 예방하고, 탄소중립 실천 실적을 지역 스포츠 산업 보상과 연계하는 AI 맞춤형 큐레이션 플랫폼입니다.",
                 features: [
-                    "<strong>AI 기반 개인 맞춤형 큐레이션 엔진 설계:</strong> 공공데이터(한국전력, 한국환경공단 등)의 전력 사용 정보와 개인 헬스케어 데이터를 통합 분석하는 추적 조사 모델을 구축함. 사용자별 탄소 절감 목표와 건강 상태를 기반으로 최적화된 지역 시설 및 건강 증진 프로그램을 매칭하는 알고리즘을 제안함.",
-                    "<strong>이종 데이터 통합 및 공공데이터 공급망 연동:</strong> 권역별 탄소배출권 할당량, 자치구별 헬스케어 시설 인프라, 에너지 소비 패턴 등 서로 다른 성격의 공공데이터를 수집하고 가공함. 한전KDN의 전력 거래 분석 데이터와 탄소포인트 가입 현황 데이터를 결합하여 서비스의 데이터 공신력을 확보함.",
-                    "<strong>디지털 모니터링을 통한 사회 안전망 강화:</strong> 저소득층 및 고립 가구의 전력 사용 패턴을 분석하여 이상 징후를 감지하고 고독사를 예방하는 모니터링 로직을 설계함. 단순 복지 지원을 넘어 데이터 기반의 실시간 모니터링으로 사회적 취약점을 보완하는 디지털 헬스케어 솔루션을 구현함.",
-                    "<strong>탄소포인트 순환형 비즈니스 모델 구축:</strong> 사용자의 탄소중립 실천 실적(에너지 절감, 걷기 등)을 지역 체육 시설 이용권 및 포인트로 환원하는 보상 체계를 기획함. 탄소포인트 공급자(기관)와 수요자(시민), 스포츠 산업자를 유기적으로 연결하는 지속 가능한 에코 시스템 아키텍처를 설계함."
+                    "<strong>AI 기반 개인 맞춤형 큐레이션 엔진 설계:</strong> 공공데이터(한국전력, 한국환경공단 등)의 전력 사용 정보와 개인 헬스케어 데이터를 통합 분석하는 추적 조사 모델을 구축하고 사용자별 탄소 절감 목표와 건강 상태에 최적화된 프로그램 매칭 알고리즘 제안",
+                    "<strong>이종 데이터 통합 및 공공데이터 공급망 연동:</strong> 권역별 탄소배출권 할당량, 자치구별 헬스케어 시설 인프라 등 서로 다른 성격의 공공데이터를 수집·가공하고 한전KDN 및 탄소포인트 데이터를 결합하여 서비스의 데이터 공신력 확보",
+                    "<strong>디지털 모니터링을 통한 사회 안전망 강화:</strong> 저소득층 및 고립 가구의 전력 사용 패턴을 분석하여 이상 징후를 감지하고 고독사를 예방하는 모니터링 로직을 설계하여 디지털 헬스케어 솔루션 구현",
+                    "<strong>탄소포인트 순환형 비즈니스 모델 구축:</strong> 사용자의 탄소중립 실천 실적을 지역 체육 시설 이용권으로 환원하는 보상 체계를 기획하고 기관, 시민, 스포츠 산업자를 연결하는 지속 가능한 에코 시스템 아키텍처 설계"
                 ],
                 result: "2023 인천대학교 AI 경진대회(보건 의료 부문) 참가 및 발표. 공공데이터를 활용한 사회적 문제 해결 가능성과 탄소중립 실천을 위한 유동적인 AI 큐레이션 모델의 실현 가능성을 입증함."
             },
@@ -624,14 +637,14 @@
                 tags: ["AI Supply Chain", "Data Visualization", "ESG", "Agri-Tech", "Carbon Neutrality"],
                 period: "2024.03 ~ 2024.06 (2024 ICT/SW 여성 창업공모전)",
                 links: [
-                    { name: "Business Plan", url: "#", icon: "fas fa-file-alt" }
+                    { name: "자세히 보기", url: "https://drive.google.com/file/d/1gjLn5zdVUWHg_EJX9LmXGNLus2IUuxbe/view?usp=sharing", icon: "fas fa-file-alt" }
                 ],
-                overview: "기후 변화와 유통 불균형으로 발생하는 잉여 농산물 폐기 문제를 해결하기 위해, AI 기반 데이터 가공 기술을 활용하여 공급망을 최적화하고 탄소 배출을 모니터링하는 지능형 유통 솔루션임.",
+                overview: "기후 변화와 유통 불균형으로 발생하는 잉여 농산물 폐기 문제를 해결하기 위해, AI 기반 데이터 가공 기술을 활용하여 공급망을 최적화하고 탄소 배출을 모니터링하는 지능형 유통 솔루션입니다.",
                 features: [
-                    "<strong>AI 기반 농산물 유통 데이터 가공 및 시각화:</strong> 산지 폐기 위기의 잉여 농산물 데이터를 수집하여 유통업자, 농가, 자치단체가 정책 결정 및 수급 조절에 활용할 수 있도록 실시간 대시보드 형태로 시각화 정보를 제공함. 이를 통해 농산물 가격 급등락에 선제적으로 대응할 수 있는 데이터 환경을 구축함.",
-                    "<strong>공급망 최적화 및 수요-공급 매칭 로직 설계:</strong> 복잡한 유통 단계(유통 비용률 최대 46.3%)를 간소화하고, 잉여 식재료를 필요로 하는 기업, 소상공인, 복지시설을 유기적으로 연결하는 매칭 알고리즘을 제안함. 1차 농산물에서 시작하여 향후 수산물과 육류까지 범위를 확장하는 단계적 데이터 고도화 로드맵을 수립함.",
-                    "<strong>탄소 저감 및 온실가스 모니터링 시스템:</strong> 연간 약 14,000톤의 음식물 폐기물 감소를 통해 온실가스 배출량의 약 2~3%(탄소 약 5만 톤 상당)를 절감하는 환경적 기대효과를 정량적으로 산출함. RE100 수출 규제 대응을 위한 데이터 기반의 ESG 경영 지표 산출 로직을 설계함.",
-                    "<strong>데이터 기반 수익화 및 구독 모델 기획:</strong> 이해관계자 데이터를 활용한 잉여 농가 생산물 온라인 유통 전략을 구축하고, 지속 가능한 모니터링을 위한 AI 학습 정보 구독 서비스를 기획함. 데이터 가공 및 분석 수익을 중심으로 4차년도에 걸친 단계별 수익화 구조를 설계함."
+                    "<strong>AI 기반 농산물 유통 데이터 가공 및 시각화:</strong> 산지 폐기 위기의 잉여 농산물 데이터를 수집하여 유통업자, 농가, 자치단체가 활용할 수 있도록 실시간 대시보드로 시각화하고 가격 급등락에 선제적으로 대응할 수 있는 데이터 환경 구축",
+                    "<strong>공급망 최적화 및 수요-공급 매칭 로직 설계:</strong> 복잡한 유통 단계를 간소화하고 잉여 식재료를 필요로 하는 기업, 소상공인, 복지시설을 연결하는 매칭 알고리즘을 제안하며 수산물과 육류까지 확장하는 로드맵 수립",
+                    "<strong>탄소 저감 및 온실가스 모니터링 시스템:</strong> 연간 약 14,000톤의 음식물 폐기물 감소를 통해 온실가스 배출량의 약 2~3%를 절감하는 기대효과를 산출하고 RE100 수출 규제 대응을 위한 ESG 경영 지표 산출 로직 설계",
+                    "<strong>데이터 기반 수익화 및 구독 모델 기획:</strong> 잉여 농가 생산물 온라인 유통 전략을 구축하고 지속 가능한 모니터링을 위한 AI 학습 정보 구독 서비스를 기획하여 단계별 수익화 구조 설계"
                 ],
                 result: "2024 ICT/SW 여성 창업공모전 참가 및 사업화 모델 구축. 농가 생산성 피해와 환경 문제를 동시에 해결하는 공익적 가치를 입증했으며, 데이터 기술을 통한 식재료 유통 시장의 디지털 전환(DX) 비전을 제시함."
             }
@@ -654,7 +667,7 @@
             document.getElementById('modal-period').textContent = data.period;
             document.getElementById('modal-overview').textContent = data.overview;
             
-            // Intro Sentence (추가된 문구)
+            // Intro Sentence
             if (data.intro) {
                 introDiv.textContent = data.intro;
                 introDiv.classList.remove('hidden');
@@ -663,13 +676,13 @@
             }
             
             if (data.result) {
-                document.getElementById('modal-result').innerHTML = data.result; // innerHTML allows bold tags
+                document.getElementById('modal-result').innerHTML = data.result;
                 document.getElementById('modal-result-container').classList.remove('hidden');
             } else {
                 document.getElementById('modal-result-container').classList.add('hidden');
             }
 
-            // 2. Image / Gradient Setting (Below Title)
+            // 2. Image / Gradient Setting
             if (data.headerType === 'image') {
                 imgContainer.classList.remove('hidden');
                 gradientContainer.classList.add('hidden');
@@ -700,6 +713,40 @@
                 li.innerHTML = `<span class="mt-2 mr-3 w-1.5 h-1.5 bg-indigo-500 rounded-full flex-shrink-0"></span><span>${feature}</span>`;
                 featuresList.appendChild(li);
             });
+
+            // ▼▼▼ Vertical Stack Layout for Execution Section ▼▼▼
+            const executionSection = document.getElementById('modal-execution-section');
+            const executionContainer = document.getElementById('modal-execution-container');
+
+            if (data.execution && data.execution.length > 0) {
+                executionContainer.innerHTML = ''; // Clear previous items
+                data.execution.forEach((item, index) => {
+                    const stepNum = index + 1;
+                    
+                    // Container for each item (Vertical)
+                    const itemContainer = document.createElement('div');
+                    itemContainer.className = 'flex flex-col gap-4';
+
+                    // Title with Step Badge
+                    const title = document.createElement('h5');
+                    title.className = 'text-lg font-bold text-slate-700 flex items-center gap-2';
+                    title.innerHTML = `<span class="bg-indigo-100 text-indigo-700 px-2.5 py-0.5 rounded text-sm">Tool ${stepNum}</span> ${item.desc}`;
+
+                    // Large Image
+                    const img = document.createElement('img');
+                    img.src = item.src;
+                    img.alt = item.desc;
+                    img.className = 'w-full rounded-xl border border-slate-200 shadow-sm';
+                    
+                    itemContainer.appendChild(title);
+                    itemContainer.appendChild(img);
+                    executionContainer.appendChild(itemContainer);
+                });
+                executionSection.classList.remove('hidden');
+            } else {
+                executionSection.classList.add('hidden');
+            }
+            // ▲▲▲ End Vertical Layout ▲▲▲
 
             // 5. Links
             const linksContainer = document.getElementById('modal-links');
@@ -744,5 +791,4 @@
         });
     </script>
 </body>
-
 </html>
