@@ -3,7 +3,7 @@
 
 https://kkimhyeonjoo.github.io/KimHyeonJoo/
 
-```
+```mermaid
 graph TD
     %% User Input Stage
     A[User Image Input: Passage & Question] --> B{Streamlit App UI}
