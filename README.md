@@ -51,7 +51,7 @@ flowchart LR
 
 
 # 문학
-```
+```mermaid
 flowchart TB
   IN[Input passage image and question image] --> QOCR[Question OCR]
   IN --> POCR[Passage OCR]
