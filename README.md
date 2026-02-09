@@ -3,7 +3,7 @@
 
 https://kkimhyeonjoo.github.io/KimHyeonJoo/
 
-'''
+```
 graph TD
     %% User Input Stage
     A[User Image Input: Passage & Question] --> B{Streamlit App UI}
@@ -26,5 +26,4 @@ graph TD
     %% Output Stage
     D4 --> F[Display Results]
     D5 -->|Tag + Embedding Similarity| F
-'''
-    
+```
